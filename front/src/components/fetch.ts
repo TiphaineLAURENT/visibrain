@@ -1,11 +1,11 @@
 import { ref, watchEffect, toValue } from 'vue';
 
-export function useFetch(url: string) {
+export function useFetch() {
   const data = ref(null);
   const error = ref(null);
   const loading = ref(false);
 
-  const fetchData = () => {
+  const fetchData = async (url: string) => {
     // reset state before fetching..
     data.value = null;
     error.value = null;
@@ -18,9 +18,5 @@ export function useFetch(url: string) {
       .finally(() => (loading.value = false));
   };
 
-  watchEffect(() => {
-    fetchData()
-  });
-
-  return { data, error, loading };
+  return { data, error, loading, fetchData };
 }
