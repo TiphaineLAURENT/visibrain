@@ -1,10 +1,12 @@
 from http import HTTPStatus
 from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from twitchAPI.twitch import Twitch
 from twitchAPI.helper import first
 
 app = FastAPI()
+app.add_middleware(CORSMiddleware, allow_origins="*")
 
 
 async def twitch():
