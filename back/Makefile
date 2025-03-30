@@ -56,4 +56,4 @@ clean:
 	rm -rf .ruff_cache poetry.lock .venv
 
 run:
-	poetry run
+	poetry run fastapi dev main.py
