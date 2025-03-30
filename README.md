@@ -12,9 +12,10 @@ A small application which offers the ability to fetch videos from a game using T
 
 ### Backend
 
-1. `cd back`
-2. `make init` (or manually install pyenv, pipx and poetry)
-3. `poetry install --no-root`
+1. Install docker : https://docs.docker.com/engine/install/ (for MongoDB)
+2. `cd back`
+3. `make init` (or manually install pyenv, pipx and poetry)
+4. `poetry install --no-root`
 
 ### Frontend
 
