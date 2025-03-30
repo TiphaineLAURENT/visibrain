@@ -56,4 +56,5 @@ clean:
 	rm -rf .ruff_cache poetry.lock .venv
 
 run:
+	docker compose up -d
 	poetry run fastapi dev main.py
