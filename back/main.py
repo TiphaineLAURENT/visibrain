@@ -18,4 +18,4 @@ async def videos(twitch: Annotated[Twitch, Depends(twitch)], game_name: str):
     if not game:
         raise HTTPException(HTTPStatus.NOT_FOUND)
 
-    return [video async for video in twitch.get_videos(game_id=game.id)]
+    return [video async for video in twitch.get_videos(game_id=game.id) if "404" not in video.thumbnail_url]
