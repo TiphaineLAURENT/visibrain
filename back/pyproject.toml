@@ -1,0 +1,22 @@
+[project]
+name = "visibrain"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Tiphaine LAURENT",email = "tiphaine.laurent@epitech.eu"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.2"
+pyright = "^1.1.398"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
