@@ -8,6 +8,19 @@ A small application which offers the ability to fetch videos from a game using T
 * Tests
 * User authentication
 
+## Installation
+
+### Backend
+
+1. `cd back`
+2. `make init` (or manually install pyenv, pipx and poetry)
+3. `poetry install --no-root`
+
+### Frontend
+
+1. Install `node>18` (I'm using [https://github.com/tj/n](n))
+2. `npm install`
+
 ## How to start the application
 
 1. Create an application on the [Twitch developer portal](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow) and save the client_id and client_secret
